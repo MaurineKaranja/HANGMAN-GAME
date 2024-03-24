@@ -1,6 +1,7 @@
 import random
 from hangman_stages import hangman_stages
-word_list = ["apples", "bananas", "oranges", "grapes", "pears", "strawberries"]
+from hangman_words import word_list
+
 chosen_word=random.choice(word_list)
 print(chosen_word)
 lives=6
@@ -19,11 +20,11 @@ while not end_of_game:
     lives-=1
     if lives==0:
       end_of_game=True
-      print("You lose!!")
+      print("YOU LOSE!!")
   print(display)
   if "_" not in display:
     end_of_game=True
-    print("You win!!")
+    print("YOU WIN!!")
   print(hangman_stages[lives])
     
     
